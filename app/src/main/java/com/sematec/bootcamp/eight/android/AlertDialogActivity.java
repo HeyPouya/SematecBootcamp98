@@ -15,7 +15,8 @@ public class AlertDialogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alert_dialog);
 
-git         dialog.setTitle("Attention!");
+        AlertDialog dialog = new AlertDialog.Builder(AlertDialogActivity.this).create();
+        dialog.setTitle("Attention!");
         dialog.setMessage("There is problem here !");
         dialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
             @Override
