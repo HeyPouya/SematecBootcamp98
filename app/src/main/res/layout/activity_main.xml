@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:text="asdfghjahjsdf"
+        android:textColor="#FF0001"
+        android:textSize="30sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/greenColor"
+        android:gravity="center"
+        android:text="@string/asdfghjahjsdf"
+        android:textColor="@color/redColor"
+        android:textSize="30sp" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:text="Click on me !"
+        android:textColor="#FF0000" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/first_photo" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:hint="@string/please_enter_your_name"
+        android:inputType="textEmailAddress"
+        android:textColor="#FF0000"
+        android:textColorHint="#00FF00"
+        android:textSize="30sp" />
+
+
+    <TextView
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#FF0000"
+        android:text="asdasdasdasd"
+        android:textSize="30sp" />
+</LinearLayout>

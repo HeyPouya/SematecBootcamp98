@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sematec.bootcamp.eight.android">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,13 +12,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".TestDialogActivity"
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
+        <activity android:name=".AlertDialogActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TestMenuActivity"></activity>
+        <activity android:name=".TestHandlerActivity" />
+        <activity android:name=".TestnotificationActivity" />
+        <activity android:name=".TestPermissionActivity" />
+        <activity android:name=".TestAsyncHttpActivity" />
+        <activity android:name=".TestURLConnectionActivity" />
+        <activity android:name=".TestThreadActivity" />
+        <activity android:name=".TestHawkActivity" />
+        <activity android:name=".TestVideoViewActivity" />
+        <activity android:name=".TestHTMLActivity" />
+        <activity android:name=".TestRecyclerActivity" />
+        <activity android:name=".TestDrawerActivity" />
+        <activity android:name=".TestPrefrenceActivity" />
+        <activity android:name=".TestImplicitActivity" />
+        <activity android:name=".SecondTestActivity" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".MainActivity" />
+
+        <receiver android:name=".TestBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
