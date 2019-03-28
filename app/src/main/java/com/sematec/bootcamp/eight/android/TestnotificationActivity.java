@@ -3,11 +3,13 @@ package com.sematec.bootcamp.eight.android;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -22,12 +24,11 @@ public class TestnotificationActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                showNotification("Attention!","Check this cool news!!!");
+                showNotification("Attention!", "Check this cool news!!!");
             }
-        },5000);
+        }, 5000);
 
     }
-
 
 
     void showNotification(String title, String content) {
@@ -37,20 +38,19 @@ public class TestnotificationActivity extends AppCompatActivity {
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel("default",
-                    "YOUR_CHANNEL_NAME",
-                    NotificationManager.IMPORTANCE_HIGH);
+                    "YOUR_CHANNEL_NAME", NotificationManager.IMPORTANCE_HIGH);
             channel.setDescription("YOUR_NOTIFICATION_CHANNEL_DISCRIPTION");
             mNotificationManager.createNotificationChannel(channel);
         }
 
 
-
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), "default")
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
+
                 .setSmallIcon(R.mipmap.ic_launcher) // notification icon
                 .setContentTitle(title) // title for notification
                 .setContentText(content)// message for notification
-                .setAutoCancel(true); // clear notification after click
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_HIGH); // clear notification after click
 
 
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);

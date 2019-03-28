@@ -12,18 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".TestDialogActivity"
-            android:theme="@style/Theme.AppCompat.Dialog"></activity>
-        <activity android:name=".AlertDialogActivity">
+        <activity android:name=".TestViewPagerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".TestMenuActivity"></activity>
+        <activity android:name=".TestFragmentActivity">
+        </activity>
+        <activity android:name=".TestCustomViewActivity"></activity>
+        <activity android:name=".TestWebViewActivity" />
+        <activity android:name=".TestDatabaseActivity" />
+        <activity android:name=".TestShapeActivity" />
+        <activity
+            android:name=".TestDialogActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".AlertDialogActivity" />
+        <activity android:name=".TestMenuActivity" />
         <activity android:name=".TestHandlerActivity" />
         <activity android:name=".TestnotificationActivity" />
         <activity android:name=".TestPermissionActivity" />
@@ -46,6 +54,8 @@
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
         </receiver>
+
+        <service android:name=".TestService" />
     </application>
 
 </manifest>

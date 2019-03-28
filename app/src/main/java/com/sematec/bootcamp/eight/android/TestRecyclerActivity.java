@@ -1,6 +1,7 @@
 package com.sematec.bootcamp.eight.android;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -34,6 +35,9 @@ public class TestRecyclerActivity extends AppCompatActivity {
         TestAdapter adapter = new TestAdapter(list);
         recycler.setAdapter(adapter);
         recycler.setLayoutManager(new LinearLayoutManager(TestRecyclerActivity.this, RecyclerView.VERTICAL, false));
+
+//        recycler.setLayoutManager(new GridLayoutManager(TestRecyclerActivity.this, 3, RecyclerView.VERTICAL, false));
+
 
     }
 }
